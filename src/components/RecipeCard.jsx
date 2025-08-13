@@ -50,7 +50,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
       <Divider />
       <CardFooter minHeight={"6rem"}>
         {recipeDetail.dietLabels && (
-          <Wrap ml={3} spacing="0.5rem">
+          <Wrap spacing="0.5rem">
             {recipeDetail.dietLabels.map((label, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="green">
@@ -61,7 +61,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
           </Wrap>
         )}
         {recipeDetail.cautions && (
-          <Wrap ml={3} spacing="0.5rem">
+          <Wrap spacing="0.5rem">
             {recipeDetail.cautions.map((caution, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="red">
@@ -72,7 +72,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
           </Wrap>
         )}
         {recipeDetail.healthLabels && (
-          <Wrap ml={3} spacing="0.5rem">
+          <Wrap spacing="0.5rem">
             {recipeDetail.healthLabels.map((label, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="purple">

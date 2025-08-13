@@ -41,8 +41,8 @@ export const RecipeDetailPage = ({ recipeKey, onBack }) => {
               <Text>Dish Type: {recipe.recipe.dishType.join(", ")}</Text>
               <Text>Total cooking time: {recipe.recipe.totalTime}</Text>
               {recipe.recipe.dietLabels && (
-                <Text>
-                  <Wrap ml={2} spacing="8px">
+                <Text marginTop="0.5rem">
+                  <Wrap spacing="0.5rem">
                     {recipe.recipe.dietLabels.map((label, index) => (
                       <WrapItem key={index}>
                         <Badge variant="outline" colorScheme="green">
@@ -54,8 +54,8 @@ export const RecipeDetailPage = ({ recipeKey, onBack }) => {
                 </Text>
               )}
               {recipe.recipe.healthLabels && (
-                <Text>
-                  <Wrap ml={2} spacing="8px">
+                <Text marginTop="0.5rem" maxWidth={"100%"}>
+                  <Wrap spacing="0.5rem">
                     {recipe.recipe.healthLabels.map((label, index) => (
                       <WrapItem key={index}>
                         <Badge variant="outline" colorScheme="purple">
@@ -67,8 +67,8 @@ export const RecipeDetailPage = ({ recipeKey, onBack }) => {
                 </Text>
               )}
               {recipe.recipe.cautions && (
-                <Text>
-                  <Wrap ml={2} spacing="8px">
+                <Text marginTop="0.5rem">
+                  <Wrap spacing="0.5rem">
                     {recipe.recipe.cautions.map((label, index) => (
                       <WrapItem key={index}>
                         <Badge variant="outline" colorScheme="red">
