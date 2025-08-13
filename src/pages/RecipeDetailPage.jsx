@@ -22,14 +22,25 @@ export const RecipeDetailPage = ({ recipeKey, onBack }) => {
   }
 
   return (
-    <Center>
-      <Box padding={4} justifyContent={"center"}>
-        <Button onClick={onBack}>Back</Button>
-        <Heading>{recipe.recipe.label}</Heading>
+    <Center padding={4}>
+      <Box
+        maxWidth={["100%", "90%", "80%", "70%", "50%"]}
+        justifyContent={"center"}
+      >
+        <Button marginBottom={4} onClick={onBack}>
+          Back
+        </Button>
+        <Heading marginBottom={4}>{recipe.recipe.label}</Heading>
         <Image src={recipe.recipe.image} alt={recipe.recipe.label} />
 
-        <Tabs variant="soft-rounded" colorScheme="purple" marginTop={4}>
-          <TabList>
+        <Tabs
+          isFitted
+          variant="soft-rounded"
+          maxW="100%"
+          colorScheme="purple"
+          marginTop={4}
+        >
+          <TabList overflow={"scroll"}>
             <Tab>Overview</Tab>
             <Tab>Ingredients</Tab>
             <Tab>Preperations</Tab>
