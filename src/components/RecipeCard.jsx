@@ -40,7 +40,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
         align="center"
         borderTopRadius={"xl"}
       />
-      <CardHeader>
+      <CardHeader minHeight={"7rem"}>
         <Text size="sm">{recipeDetail.mealType.join(", ")}</Text>
         <Heading size="md">{recipeDetail.name}</Heading>
       </CardHeader>
@@ -48,9 +48,9 @@ export const RecipeCard = ({ recipe, onClick }) => {
         <Text>{recipeDetail.dishType.join(", ")}</Text>
       </CardBody>
       <Divider />
-      <CardFooter>
+      <CardFooter minHeight={"6rem"}>
         {recipeDetail.dietLabels && (
-          <Wrap ml={2} spacing="0.25rem">
+          <Wrap ml={3} spacing="0.5rem">
             {recipeDetail.dietLabels.map((label, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="green">
@@ -61,7 +61,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
           </Wrap>
         )}
         {recipeDetail.cautions && (
-          <Wrap ml={2} spacing="0.25rem">
+          <Wrap ml={3} spacing="0.5rem">
             {recipeDetail.cautions.map((caution, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="red">
@@ -72,7 +72,7 @@ export const RecipeCard = ({ recipe, onClick }) => {
           </Wrap>
         )}
         {recipeDetail.healthLabels && (
-          <Wrap ml={2} spacing="0.25rem">
+          <Wrap ml={3} spacing="0.5rem">
             {recipeDetail.healthLabels.map((label, index) => (
               <WrapItem key={index}>
                 <Badge variant="outline" colorScheme="purple">
