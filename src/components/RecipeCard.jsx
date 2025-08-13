@@ -50,43 +50,37 @@ export const RecipeCard = ({ recipe, onClick }) => {
       <Divider />
       <CardFooter>
         {recipeDetail.dietLabels && (
-          <Text>
-            <Wrap ml={2} spacing="0.25rem">
-              {recipeDetail.dietLabels.map((label, index) => (
-                <WrapItem key={index}>
-                  <Badge variant="outline" colorScheme="green">
-                    {label}
-                  </Badge>
-                </WrapItem>
-              ))}
-            </Wrap>
-          </Text>
+          <Wrap ml={2} spacing="0.25rem">
+            {recipeDetail.dietLabels.map((label, index) => (
+              <WrapItem key={index}>
+                <Badge variant="outline" colorScheme="green">
+                  {label}
+                </Badge>
+              </WrapItem>
+            ))}
+          </Wrap>
         )}
         {recipeDetail.cautions && (
-          <Text>
-            <Wrap ml={2} spacing="0.25rem">
-              {recipeDetail.cautions.map((caution, index) => (
-                <WrapItem key={index}>
-                  <Badge variant="outline" colorScheme="red">
-                    {caution}
-                  </Badge>
-                </WrapItem>
-              ))}
-            </Wrap>
-          </Text>
+          <Wrap ml={2} spacing="0.25rem">
+            {recipeDetail.cautions.map((caution, index) => (
+              <WrapItem key={index}>
+                <Badge variant="outline" colorScheme="red">
+                  {caution}
+                </Badge>
+              </WrapItem>
+            ))}
+          </Wrap>
         )}
         {recipeDetail.healthLabels && (
-          <Text>
-            <Wrap ml={2} spacing="0.25rem">
-              {recipeDetail.healthLabels.map((label, index) => (
-                <WrapItem key={index}>
-                  <Badge variant="outline" colorScheme="purple">
-                    {label}
-                  </Badge>
-                </WrapItem>
-              ))}
-            </Wrap>
-          </Text>
+          <Wrap ml={2} spacing="0.25rem">
+            {recipeDetail.healthLabels.map((label, index) => (
+              <WrapItem key={index}>
+                <Badge variant="outline" colorScheme="purple">
+                  {label}
+                </Badge>
+              </WrapItem>
+            ))}
+          </Wrap>
         )}
       </CardFooter>
     </Card>
