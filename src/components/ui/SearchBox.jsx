@@ -5,7 +5,7 @@ import { Input, Box } from "@chakra-ui/react";
 // hiermee kan je zoeken naar recepten in de dataset en de resultaten tonen.
 //  tijdens het typen van de zoekopdracht, worden de resultaten gefilterd en weergegeven.
 
-export const SearchBox = ({ watErGaatKomen }) => {
+export const SearchBox = ({ onSearchChange }) => {
   const handleSearch = (event) => {
     const zoekterm = event.target.value.toLowerCase();
 
@@ -20,7 +20,7 @@ export const SearchBox = ({ watErGaatKomen }) => {
       );
     });
 
-    watErGaatKomen(matchingRecipes);
+    onSearchChange(matchingRecipes);
   };
 
   // In deze component kan je een inputveld en een knop toevoegen voor de zoekfunctionaliteit.
