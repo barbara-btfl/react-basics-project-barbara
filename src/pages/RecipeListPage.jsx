@@ -16,7 +16,7 @@ export const RecipeListPage = ({ onSelect }) => {
         {/* Laat elke receptkaart verwijzen naar een RecipePage met key={label} */}
         <Box padding={4} textAlign="center" mb={8}>
           <Heading marginBottom={"0.5em"}>Your Recipe App</Heading>
-          <SearchBox watErGaatKomen={setSearchField} />
+          <SearchBox onSearchChange={setSearchField} />
         </Box>
         <Wrap spacing="2rem" justify="center">
           {searchField.map((hit) => (
