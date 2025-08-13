@@ -1,8 +1,8 @@
 import { Box, Heading, Wrap, Center, WrapItem } from "@chakra-ui/react";
 import { data } from "../utils/data";
-import { SearchBox } from "../components/ui/searchbox";
+import { SearchBox } from "../components/ui/SearchBox";
 import { useState } from "react";
-import { RecipeCard } from "../components/recipeCard";
+import { RecipeCard } from "../components/RecipeCard";
 
 export const RecipeListPage = ({ onSelect }) => {
   // You can play around with the console log, but ultimately remove it once you are done
